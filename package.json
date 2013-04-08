@@ -1,0 +1,35 @@
+{
+  "name": "til",
+  "version": "0.0.1",
+  "author": "Ian O'Dea <ianodea@gmail.com>",
+  "description": "Visualizing knowledge gain",
+  "contributors": [
+    {
+        "name": "Ian O'Dea",
+        "email": "ianodea@gmail.com"
+    }
+  ],
+  "main": "./lib/til",
+  "bin": {},
+  "scripts": {
+    "start": "coffee app/server/lib/app.coffee",
+    "compile-client-js": "coffee -wc -o public/js/ app/client/coffeescripts/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iaman/til.git"
+  },
+  "dependencies": {
+    "coffee-script": "*",
+    "stylus": "*",
+    "nib": "*",
+    "express": "*",
+    "jade": "*",
+    "stitch": "*",
+    "connect": "~2.4.5"
+  },
+  "license": "MIT",
+  "engine": {
+    "node": ">=0.6"
+  }
+}
