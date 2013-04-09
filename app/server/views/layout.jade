@@ -13,9 +13,7 @@ html
     header
       nav
         ul
-          li.trademark
-            a(href="/")
-          - var navigation = [{'name':'Home','url':'/','classes':[]},{'name':'Styleguide','url':'/styleguide','classes':[]}]
+          - var navigation = [{'name':'Home','url':'/','classes':[]},{'name':'Styleguide','url':'/styleguide','classes':['right']}]
           - for item in navigation
             - if (item.name == page)
               - item.classes.push('current')

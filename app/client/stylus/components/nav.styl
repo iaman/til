@@ -32,9 +32,9 @@ nav
         display: none
         height: 9px
         left: 50%
-        margin-left: -1 * floor($gutter-width)
+        margin-left: -2 * $gutter-width
         position: absolute
-        width: $gutter-width * 2
+        width: $gutter-width * 4
         z-index: 1
 
       &:after
@@ -44,13 +44,16 @@ nav
         border-left: 1px solid $dark-gray
         bottom: -6px
         content: ''
-        display: block
+        display: none
         height: 10px
         left: 50%
         margin-left: -5px
         position: absolute
         transform: rotate(-45deg)
         width: 10px
+
+    &.right
+      float: right
 
   ul
     clearfix()
@@ -61,10 +64,10 @@ nav
 
 @media $medium-width
   nav li.current
-    &:before
+    &:after,&:before
       display: block
 
 @media $large-width
   nav li.current
-    &:before
+    &:after,&:before
       display: block
