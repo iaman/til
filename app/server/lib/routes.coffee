@@ -4,3 +4,8 @@ exports.run_paths = (app) ->
     res.render 'index.jade',
       title: 'Motherfucking Knowledge Gain',
       page: 'Home'
+
+  app.get '/styleguide', (req, res) ->
+    res.render 'styleguide.jade',
+      title: 'Check out deez styles',
+      page: 'Styleguide'

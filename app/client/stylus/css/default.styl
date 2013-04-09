@@ -1,5 +1,50 @@
+@import 'nib'
+@import '../normalize'
 @import '../variables'
+@import '../mixins'
+@import '../grid'
+@import '../typography'
+@import '../components'
 
 html
-  background: $black
+  background: $black url("/images/dark_stripe.png") top left repeat
   color: $white
+  font: $font-base $sans-serif
+  line-height: $line-base
+
+body
+  margin: 0
+
+header
+  width: 100%
+
+article
+  margin: 0 auto
+  max-width: $container-width
+  width: 100%
+
+section
+  clearfix()
+  float: left
+
+footer
+  clear: both
+  width: 100%
+
+  hgroup
+    float: none
+    margin: 0 auto
+    max-width: $container-width
+    width: 100%
+
+for num in 1..$columns
+  .grid-{num} span
+    background: $true-black
+    border: 1px solid $dark-gray
+    border-radius: 4px
+    display: block
+    text-align: center
+
+    &:hover
+      background: $dark-gray
+      border-color: $gray

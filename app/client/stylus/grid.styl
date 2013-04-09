@@ -1,0 +1,28 @@
+.grid
+  box-sizing: border-box
+  display: block
+  float: left
+  margin-bottom: $line-base
+  padding-left: $gutter-width
+  padding-right: $gutter-width
+  position: relative
+  width: 100%
+
+for num in 1..$columns
+  .grid-{num}
+    @extend .grid
+
+.no-pad
+  padding-left: 0
+  padding-right: 0
+
+@media $medium-width
+  for num in 1..$columns
+    blah = num == 2 ? 2 : 4
+    .grid-{num}
+      width: unit(blah * 100 / $columns, '%')
+
+@media $large-width
+  for num in 1..$columns
+    .grid-{num}
+      width: unit(num * 100 / $columns, '%')

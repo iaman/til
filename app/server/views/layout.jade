@@ -10,4 +10,22 @@ html
 
 
   body
-    block body
+    header
+      nav
+        ul
+          li.trademark
+            a(href="/")
+          - var navigation = [{'name':'Home','url':'/','classes':[]},{'name':'Styleguide','url':'/styleguide','classes':[]}]
+          - for item in navigation
+            - if (item.name == page)
+              - item.classes.push('current')
+            li(class=item.classes)
+              a(href="#{item.url}") #{item.name}
+
+    article
+      block body
+
+    footer
+      hgroup
+        h1
+          | Need help? Check out our <a href="https://github.com/iaman/til" target="_blank">github repo</a></a>
