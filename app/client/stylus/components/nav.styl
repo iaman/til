@@ -19,38 +19,45 @@ nav
     float: left
     position: relative
 
+    &:after
+      background: $true-black
+      //radial-gradients("55% 45%, farthest-corner, " + $dark-blue + " 0%, " + rgba($dark-blue, 0) + " 100%")
+      border-bottom: 1px solid $dark-gray
+      border-left: 1px solid $dark-gray
+      bottom: -6px
+      content: ''
+      display: none
+      height: 10px
+      left: 50%
+      margin-left: -5px
+      position: absolute
+      transform: rotate(-45deg)
+      width: 10px
+
+    &:before
+      background: $true-black
+      radial-gradients("50% 0, farthest-side, " + $white + " 0%, " + $bright-blue + " 10%, " + rgba($dark-blue, 0) + " 100%")
+      border-top: 1px solid $true-black
+      content: ''
+      display: block
+      height: 9px
+      left: 50%
+      margin-left: -2 * $gutter-width
+      opacity: 0
+      position: absolute
+      top: 0
+      transition: opacity 0.1s ease-in-out
+      width: $gutter-width * 4
+      z-index: 1
+
+
+    &:hover
+      &:before
+        opacity: 1
+
     &.current
       a
         color: $bright-blue
-
-      &:before
-        background: $true-black
-        radial-gradients("50% 100%, farthest-side, " + $bright-blue + " 0%, " + rgba($dark-blue, 0) + " 100%")
-        border-bottom: 1px solid $true-black
-        bottom: 0
-        content: ''
-        display: none
-        height: 9px
-        left: 50%
-        margin-left: -2 * $gutter-width
-        position: absolute
-        width: $gutter-width * 4
-        z-index: 1
-
-      &:after
-        background: $true-black
-        radial-gradients("55% 45%, farthest-corner, " + $dark-blue + " 0%, " + rgba($dark-blue, 0) + " 100%")
-        border-bottom: 1px solid $dark-gray
-        border-left: 1px solid $dark-gray
-        bottom: -6px
-        content: ''
-        display: none
-        height: 10px
-        left: 50%
-        margin-left: -5px
-        position: absolute
-        transform: rotate(-45deg)
-        width: 10px
 
     &.right
       float: right
@@ -66,8 +73,12 @@ nav
   nav li.current
     &:after,&:before
       display: block
+    &:before
+      opacity: 1
 
 @media $large-width
   nav li.current
     &:after,&:before
       display: block
+    &:before
+      opacity: 1
