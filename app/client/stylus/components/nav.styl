@@ -23,13 +23,13 @@ nav
       a
         color: $bright-blue
 
-      &::before
+      &:before
         background: $true-black
         radial-gradients("50% 100%, farthest-side, " + $bright-blue + " 0%, " + rgba($dark-blue, 0) + " 100%")
         border-bottom: 1px solid $true-black
         bottom: 0
         content: ''
-        display: block
+        display: none
         height: 9px
         left: 50%
         margin-left: -1 * floor($gutter-width)
@@ -37,7 +37,7 @@ nav
         width: $gutter-width * 2
         z-index: 1
 
-      &::after
+      &:after
         background: $true-black
         radial-gradients("55% 45%, farthest-corner, " + $dark-blue + " 0%, " + rgba($dark-blue, 0) + " 100%")
         border-bottom: 1px solid $dark-gray
@@ -58,3 +58,13 @@ nav
     max-width: $container-width - ($gutter-width * 2)
     padding: 0
     width: 100%
+
+@media $medium-width
+  nav li.current
+    &:before
+      display: block
+
+@media $large-width
+  nav li.current
+    &:before
+      display: block
