@@ -6,6 +6,10 @@
 @import '../typography'
 @import '../components'
 
+hashGet(hash,key)
+  for pair in hash
+    return pair[1] if pair[0] == key
+
 .clearfix
   clearfix()
 
@@ -75,47 +79,24 @@ footer
 
   .mid-blue
     @extend .swatch .dark-blue
-    background: $mid-blue
+    background-color: $mid-blue
 
   .bright-blue
     @extend .swatch .dark-blue
-    background: $bright-blue
+    background-color: $bright-blue
 
-  .dark-red
+for color in "red" "yellow" "green" "purple"
+  .swatch .dark-{unquote(color)}
     @extend .swatch .dark-blue
-    background: $dark-red
+    background-color: hashGet($colors,"dark-" + color)
 
-  .mid-red
+  .swatch .mid-{unquote(color)}
     @extend .swatch .dark-blue
-    background: $mid-red
+    background-color: hashGet($colors,"mid-" + color)
 
-  .bright-red
+  .swatch .bright-{unquote(color)}
     @extend .swatch .dark-blue
-    background: $bright-red
-
-  .dark-yellow
-    @extend .swatch .dark-blue
-    background: $dark-yellow
-
-  .mid-yellow
-    @extend .swatch .dark-blue
-    background: $mid-yellow
-
-  .bright-yellow
-    @extend .swatch .dark-blue
-    background: $bright-yellow
-
-  .dark-green
-    @extend .swatch .dark-blue
-    background: $dark-green
-
-  .mid-green
-    @extend .swatch .dark-blue
-    background: $mid-green
-
-  .bright-green
-    @extend .swatch .dark-blue
-    background: $bright-green
+    background-color: hashGet($colors,"bright-" + color)
 
 
 for num in 1..$columns
