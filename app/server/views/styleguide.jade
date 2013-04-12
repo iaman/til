@@ -5,14 +5,32 @@ block body
     section
       hgroup
         h1 Holy crap it's a styleguide
+
+    section
+      .grid-4
+        .alerts
+          .alert
+            p This is a general alert
+        .alerts-success
+          .alert
+            p This one's a SUCCESS alert!
+        .alerts-warning
+          .alert
+            p Whoa, this one's a warning!
+        .alerts-error
+          .alert
+            p And this is an error!
+
     .slice
       section
         .grid-4
           p This is a slice
+
     .slice-fiber
       section
         .grid-4
           p This is a fiber slice
+
     section#grid
       hgroup
         h2 This is the grid system
@@ -69,7 +87,7 @@ block body
 
       .swatch.grid-1
         .bright-green
-          span .bright-green #178F47
+          span .bright-green #5CB860
         .mid-green
           span .mid-green #178F47
         .dark-green

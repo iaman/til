@@ -1,0 +1,60 @@
+.alerts
+  background: $bright-blue url("/images/dark_transparent_stripe.png") top left repeat
+  border: $border-alert solid $dark-blue
+  border-bottom: $border-alert solid $mid-blue
+  border-radius: $border-alert-radius
+  box-shadow: 0 1px 3px rgba($dark-blue,0.5), inset 0 10px 10px -10px $black
+  color: $dark-blue
+  margin-bottom: $line-base
+  padding: $line-base - ($line-base / 4) - $border-alert
+  text-shadow: 0 1px 1px $dark-blue
+
+  p
+    margin-bottom: 0
+    width: 100%
+
+  .alert
+    clearfix()
+    background: $bright-blue
+    margin-bottom: $line-base
+    padding: ($line-base / 4)
+    position: relative
+
+    &:last-child
+      margin-bottom: 0
+
+.alerts-error
+  @extend .alerts
+  background-color: $bright-red
+  border-color: $dark-red
+  border-bottom-color: $mid-red
+  box-shadow: 0 1px 3px rgba($dark-red,0.5), inset 0 10px 10px -10px $black
+  color: $dark-red
+  text-shadow: 0 1px 1px $dark-red
+
+  .alert
+    background: $bright-red
+
+.alerts-success
+  @extend .alerts
+  background-color: $bright-green
+  border-color: $dark-green
+  border-bottom-color: $mid-green
+  box-shadow: 0 1px 3px rgba($dark-green,0.5), inset 0 10px 10px -10px $black
+  color: $dark-green
+  text-shadow: 0 1px 1px $dark-green
+
+  .alert
+    background: $bright-green
+
+.alerts-warning
+  @extend .alerts
+  background-color: $bright-yellow
+  border-color: $dark-yellow
+  border-bottom-color: $mid-yellow
+  box-shadow: 0 1px 3px rgba($dark-yellow,0.5), inset 0 10px 10px -10px $black
+  color: $dark-yellow
+  text-shadow: 0 1px 1px $dark-yellow
+
+  .alert
+    background: $bright-yellow
