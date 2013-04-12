@@ -57,8 +57,69 @@ footer
   box-shadow: 0 1px 0 rgba($white, 0.3), inset 0 1px 0 $true-black, inset 0 10px 10px -10px $true-black
   text-shadow: 0 2px 5px $black
 
+.swatch
+  span
+    background: rgba($black,0.8)
+    color: $white
+    display: block
+    float: left
+    padding: ($line-base / 4)
+    text-shadow: 0 2px 5px $black
+    width: auto
+
+  .dark-blue
+    @extend .clearfix
+    background: $dark-blue
+    padding: ($line-base / 4)
+    position: relative
+
+  .mid-blue
+    @extend .swatch .dark-blue
+    background: $mid-blue
+
+  .bright-blue
+    @extend .swatch .dark-blue
+    background: $bright-blue
+
+  .dark-red
+    @extend .swatch .dark-blue
+    background: $dark-red
+
+  .mid-red
+    @extend .swatch .dark-blue
+    background: $mid-red
+
+  .bright-red
+    @extend .swatch .dark-blue
+    background: $bright-red
+
+  .dark-yellow
+    @extend .swatch .dark-blue
+    background: $dark-yellow
+
+  .mid-yellow
+    @extend .swatch .dark-blue
+    background: $mid-yellow
+
+  .bright-yellow
+    @extend .swatch .dark-blue
+    background: $bright-yellow
+
+  .dark-green
+    @extend .swatch .dark-blue
+    background: $dark-green
+
+  .mid-green
+    @extend .swatch .dark-blue
+    background: $mid-green
+
+  .bright-green
+    @extend .swatch .dark-blue
+    background: $bright-green
+
+
 for num in 1..$columns
-  .grid-{num} span
+  #grid .grid-{num} span
     background: $true-black
     border-radius: 4px
     box-shadow: 0 0 0 1px $dark-gray
