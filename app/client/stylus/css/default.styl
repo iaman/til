@@ -21,6 +21,8 @@ html
   font: $font-base $sans-serif
   image: "/images/dark_stripe.png" 3px 3px
   line-height: $line-base
+  max-width: 100%
+  width: 100%
 
 body
   margin: 0
@@ -116,3 +118,11 @@ for num in 1..$columns
     &:hover
       background: $dark-gray
       box-shadow: 0 0 0 1px $gray
+
+@media $medium-width
+  section, footer hgroup
+    max-width: $container-medium-width
+
+@media $large-width
+  section, footer hgroup
+    max-width: $container-large-width
