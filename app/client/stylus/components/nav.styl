@@ -1,11 +1,11 @@
 nav
   background-color: $true-black
   background-image: linear-gradient($black,$true-black)
-  border-bottom: 4px solid $dark-gray
+  border-bottom: $border-nav-bottom solid $dark-gray
   box-shadow: 0 1px 0 0 $black, 0 1px 0 1px $dark-gray
   color: $white
   height: auto
-  margin-bottom: $line-base - 4px
+  margin-bottom: $line-base - $border-nav-bottom
   min-height: 2 * $line-base
   width: 100%
 
@@ -24,15 +24,15 @@ nav
       //radial-gradients("55% 45%, farthest-corner, " + $dark-blue + " 0%, " + rgba($dark-blue, 0) + " 100%")
       border-bottom: 1px solid $dark-gray
       border-left: 1px solid $dark-gray
-      bottom: -6px
+      bottom: -1 * ($border-nav-bottom + 1)
       content: ''
       display: none
-      height: 10px
+      height: $border-nav-bottom * 2
       left: 50%
-      margin-left: -5px
+      margin-left: -1 * (@height / 2)
       position: absolute
       transform: rotate(-45deg)
-      width: 10px
+      width: @height
 
     &:before
       background: $true-black
