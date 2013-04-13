@@ -5,6 +5,7 @@ app = express()
 app.configure ->
   app.set('views', "#{__dirname}/../views")
   app.set('view engine', 'jade')
+  app.locals.pretty = true
   app.use middleware
 
 require("#{__dirname}/routes").run_paths(app)
