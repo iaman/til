@@ -15,22 +15,23 @@ hashGet(hash,key)
 
 html
   background-color: $black
-  background-position: top left
-  background-repeat: repeat
   color: $white
   font: $font-base $sans-serif
-  image: "/images/dark_stripe.png" 3px 3px
   line-height: $line-base
   max-width: 100%
   width: 100%
 
 body
+  background-position: top left
+  background-repeat: repeat
+  image: "/images/dark_stripe.png" 3px 3px
   margin: 0
 
 header
   width: 100%
 
 article
+  margin-bottom: $line-base
   width: 100%
 
 section
@@ -40,8 +41,25 @@ section
   width: 100%
 
 footer
+  background: $black
+  box-shadow: inset 0 10px 10px -10px $true-black
   clear: both
+  padding: $line-base 0
+  position: relative
   width: 100%
+
+  &:before
+    background: $black
+    box-shadow: inset 10px 10px 10px -10px $true-black
+    content: ''
+    display: block
+    height: $line-base
+    left: 50%
+    margin-left: -1 * (@height / 2)
+    position: absolute
+    top: -1 * (@height / 2)
+    transform: rotate(45deg)
+    width: @height
 
   hgroup
     float: none

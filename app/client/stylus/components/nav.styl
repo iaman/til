@@ -55,6 +55,9 @@ nav
         opacity: 1
 
     &.current
+      &:after
+        display: block
+
       a
         color: $bright-blue
 
@@ -69,15 +72,14 @@ nav
     width: 100%
 
 @media $medium-width
-  nav li.current
-    &:after,&:before
-      display: block
-    &:before
-      opacity: 1
+  nav
+
+    li.current
+      &:before
+        opacity: 1
 
 @media $large-width
-  nav li.current
-    &:after,&:before
-      display: block
-    &:before
-      opacity: 1
+  nav
+    li.current
+      &:before
+        opacity: 1
