@@ -111,7 +111,7 @@ footer
     @extend .swatch .dark-blue
     background-color: $bright-blue
 
-for color in "red" "yellow" "green" "purple"
+for color in "red" "yellow" "green" "purple" "orange"
   .swatch .dark-{unquote(color)}
     @extend .swatch .dark-blue
     background-color: hashGet($colors,"dark-" + color)
