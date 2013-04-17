@@ -1,9 +1,9 @@
 a
-  color: $mid-blue
+  color: hashGet($colors, "mid-" + $main-color)
   text-decoration: none
 
   &:hover
-    color: $bright-blue
+    color: hashGet($colors, "bright-" + $main-color)
     text-decoration: underline
 
 p
