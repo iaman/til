@@ -1,0 +1,37 @@
+button, input[type="button"], .button
+  background: $mid-blue
+  background-image: linear-gradient($bright-blue, $bright-blue 1px, $mid-blue 2px)
+  border: $border-button solid $dark-blue
+  border-radius: $border-button-radius
+  box-shadow: 0 ($line-base / 4) 0 $dark-blue, 0 ($line-base / 4) ($line-base / 2) $black
+  color: $white
+  display: block
+  float: left
+  font-weight: bold
+  line-height: $line-base
+  margin-bottom: ($line-base / 2)
+  padding: ($line-base / 4) $gutter-width
+  position: relative
+  text-shadow: 0 1px 1px $black
+  top: 0
+  transition: box-shadow 0.1s ease, background-color 0.1s ease, top 0.1s ease
+
+  &.large
+    font-size: $font-bigger
+    line-height: $line-base * 2
+    padding: ($line-base / 2) $gutter-width
+
+  &.huge
+    font-size: $font-biggest
+    line-height: $line-base * 2
+    padding: $line-base $gutter-width
+    text-transform: uppercase
+
+  &:hover
+    box-shadow: 0 ($line-base / 4) + 2 0 $dark-blue, 0 ($line-base / 4) + 2 ($line-base / 2) + 2 $black
+    top: -2px
+
+  &:active
+    box-shadow: 0 1px 0 $dark-blue, 0 1px ($line-base / 4) $black
+    top: ($line-base / 4) - 1
+
