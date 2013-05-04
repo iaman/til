@@ -29,7 +29,7 @@ button, input[type="button"], .button
   text-align: center
   text-shadow: 0 1px 1px $black
   top: 0
-  transition: box-shadow 0.1s ease, background-color 0.1s ease, top 0.1s ease
+  transition: box-shadow 0.1s ease, background-color 0.1s ease, text-shadow 0.1s ease, top 0.1s ease
   white-space: normal
   width: 100%
 
@@ -37,11 +37,13 @@ button, input[type="button"], .button
     font-size: $font-bigger
     line-height: $line-base * 2
     padding: ($line-base / 2) - $border-button ($gutter-width / 2)
+    text-shadow: 0 1px 2px $black, 0 -1px 0 $true-white
 
   &.huge
     font-size: $font-biggest
     line-height: $line-base * 2
     padding: $line-base - $border-button $gutter-width
+    text-shadow: 0 1px 3px $black, 0 -1px 0 $true-white
     text-transform: uppercase
 
 
