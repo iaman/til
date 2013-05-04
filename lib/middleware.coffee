@@ -13,6 +13,7 @@ jsDependencies = [
   "#{__dirname}/../public/js/thirdparty/jquery.js"
   "#{__dirname}/../public/js/thirdparty/underscore.js"
   "#{__dirname}/../public/js/thirdparty/backbone.js"
+  "#{__dirname}/../public/js/toggle-grid.js"
 ]
 
 stylusOptions =
