@@ -22,9 +22,9 @@ button, input[type="button"], .button
   float: left
   font-weight: bold
   line-height: $line-base
-  margin-bottom: ($line-base / 2) - $border-button * 2
+  margin-bottom: $line-base
   max-width: 100%
-  padding: ($line-base / 4) ($gutter-width / 2)
+  padding: ($line-base / 2) - $border-button ($gutter-width / 2)
   position: relative
   text-align: center
   text-shadow: 0 1px 1px $black
@@ -36,12 +36,12 @@ button, input[type="button"], .button
   &.large
     font-size: $font-bigger
     line-height: $line-base * 2
-    padding: ($line-base / 2) ($gutter-width / 2)
+    padding: ($line-base / 2) - $border-button ($gutter-width / 2)
 
   &.huge
     font-size: $font-biggest
     line-height: $line-base * 2
-    padding: $line-base $gutter-width
+    padding: $line-base - $border-button $gutter-width
     text-transform: uppercase
 
 
