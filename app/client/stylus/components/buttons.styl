@@ -2,13 +2,15 @@ button-color(buttonColor)
   background: hashGet($colors, "mid-" + buttonColor)
   background-image: linear-gradient($white, hashGet($colors, "bright-" + buttonColor) 1px, hashGet($colors, "mid-" + buttonColor) 2px)
   border-color: hashGet($colors, "dark-" + buttonColor)
-  box-shadow: inset 0 0 2px hashGet($colors, "bright-" + buttonColor), 0 ($line-base / 4) 0 hashGet($colors, "dark-" + buttonColor), 0 ($line-base / 4) ($line-base / 2) $black
+  box-shadow: inset 0 -1px 1px 1px hashGet($colors, "bright-" + buttonColor), 0 ($line-base / 4) 0 hashGet($colors, "dark-" + buttonColor), 0 ($line-base / 4) ($line-base / 2) $black
 
   &:hover
-    box-shadow: inset 0 0 2px hashGet($colors, "bright-" + buttonColor), 0 ($line-base / 4) + 2 0 hashGet($colors, "dark-" + buttonColor), 0 ($line-base / 4) + 1 ($line-base / 2) + 2 $black
+    background-image: linear-gradient($white, hashGet($colors, "bright-" + buttonColor) 1px, hashGet($colors, "mid-" + buttonColor) 3px)
+    box-shadow: inset 0 -1px 1px 1px hashGet($colors, "bright-" + buttonColor), 0 ($line-base / 4) + 2 0 hashGet($colors, "dark-" + buttonColor), 0 ($line-base / 4) + 2 ($line-base / 2) + 2 $black
 
   &:active
-    box-shadow: inset 0 0 2px hashGet($colors, "bright-" + buttonColor), 0 1px 0 hashGet($colors, "dark-" + buttonColor), 0 1px ($line-base / 4) $black
+    background-image: linear-gradient(hashGet($colors, "bright-" + buttonColor), hashGet($colors, "mid-" + buttonColor) 2px)
+    box-shadow: inset 0 -1px 1px 1px hashGet($colors, "bright-" + buttonColor), 0 1px 0 hashGet($colors, "dark-" + buttonColor), 0 1px ($line-base / 4) $black
 
 button, input[type="button"], .button
   button-color("blue")
