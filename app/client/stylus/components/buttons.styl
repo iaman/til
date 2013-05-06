@@ -82,6 +82,10 @@ button, input[type="button"], .button
     &:active
       top: 0
 
+  for buttonColor in "blue" "red" "yellow" "green" "purple" "orange"
+    &.{unquote(buttonColor)}
+      button-color(buttonColor)
+
 @media $medium-width
   button, input[type="button"], .button
     width: auto
