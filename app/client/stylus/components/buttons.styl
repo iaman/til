@@ -9,7 +9,7 @@ button-color(buttonColor)
     box-shadow: inset 0 -1px 1px 1px hashGet($colors, "bright-" + buttonColor), 0 ($line-base / 4) + 2 0 hashGet($colors, "dark-" + buttonColor), 0 ($line-base / 4) + 2 ($line-base / 2) + 2 $black
 
   &:active
-    background-image: linear-gradient(hashGet($colors, "bright-" + buttonColor), hashGet($colors, "mid-" + buttonColor) 2px)
+    background-image: linear-gradient($white, hashGet($colors, "mid-" + buttonColor) 1px)
     box-shadow: inset 0 -1px 1px 1px hashGet($colors, "bright-" + buttonColor), 0 1px 0 hashGet($colors, "dark-" + buttonColor), 0 1px ($line-base / 4) $black
 
 button, input[type="button"], .button
@@ -40,13 +40,13 @@ button, input[type="button"], .button
     font-size: $font-bigger
     line-height: $line-base * 2
     padding: ($line-base / 2) - $border-button ($gutter-width / 2)
-    text-shadow: 0 1px 2px $black, 0 -1px 0 $true-white
+    text-shadow: 0 1px 2px $black, 0 1px 1px $gray
 
   &.huge
     font-size: $font-biggest
     line-height: $line-base * 2
     padding: $line-base - $border-button $gutter-width
-    text-shadow: 0 1px 3px $black, 0 -1px 0 $true-white
+    text-shadow: 0 1px 3px $black, 0 1px 1px $gray
     text-transform: uppercase
 
 
@@ -67,6 +67,20 @@ button, input[type="button"], .button
 
   &.danger
     button-color("red")
+
+  &.disabled
+    background: $gray
+    background-image: none
+    border-color: $dark-gray
+    box-shadow: inset 0 -1px 1px 1px $gray, 0 ($line-base / 4) 0 $dark-gray, 0 ($line-base / 4) ($line-base / 2) $black
+    cursor: auto
+    image: "../images/dark_transparent_stripe.png" 20px 20px
+
+    &:hover
+      top: 0
+
+    &:active
+      top: 0
 
 @media $medium-width
   button, input[type="button"], .button
