@@ -125,6 +125,13 @@ for color in "red" "yellow" "green" "purple" "orange"
     @extend .swatch .dark-blue
     background-color: hashGet($colors,"bright-" + color)
 
+for color in $colors
+  .bg-{unquote(color[0])}
+    background-color: color[1]
+
+  .text-{unquote(color[0])}
+    color: color[1]
+
 
 for num in 1..$columns
   #grid .grid-{num} span
