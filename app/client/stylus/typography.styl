@@ -12,20 +12,23 @@ p
 ul
   margin: 0 0 $line-base
 
-h1
+h1, .h1
   font-size: $font-biggest
+  font-weight: bold
   line-height: $line-base * 2
   margin: 0 0 $line-base
+  text-shadow: 0 2px 5px $black
 
-h2
+h2, .h2
+  @extend h1
   font-size: $font-bigger
-  line-height: $line-base * 2
-  margin: 0 0 $line-base
+  font-weight: 300
 
-h3
+
+h3, .h3
+  @extend h1
   font-size: $font-base
   line-height: $line-base
-  margin: 0 0 $line-base
 
 hgroup
   box-sizing: border-box
