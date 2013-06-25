@@ -23,6 +23,7 @@ button, input[type="button"], .button
   cursor: pointer
   display: block
   float: left
+  font-family: $sans-serif
   font-weight: bold
   line-height: $line-base
   margin-bottom: $line-base
@@ -37,18 +38,12 @@ button, input[type="button"], .button
   width: 100%
 
   &.large
+    float: none
     font-size: $font-bigger
-    line-height: $line-base * 2
-    padding: ($line-base / 2) - $border-button ($gutter-width / 2)
-    text-shadow: 0 1px 2px $black, 0 1px 1px $gray
-
-  &.huge
-    font-size: $font-biggest
     line-height: $line-base * 2
     padding: $line-base - $border-button $gutter-width
     text-shadow: 0 1px 3px $black, 0 1px 1px $gray
     text-transform: uppercase
-
 
   &:visited
     color: $white
@@ -90,6 +85,12 @@ button, input[type="button"], .button
   button, input[type="button"], .button
     width: auto
 
+    &.large
+      width: 100%
+
 @media $large-width
   button, input[type="button"], .button
     width: auto
+
+    &.large
+      width: 100%
