@@ -18,7 +18,7 @@ progressColors(progress-color, mid-color = "mid-" + progress-color, dark-color =
   background-color: hashGet($colors, mid-color)
   background-image: url("../images/dark_transparent_stripe.png"), linear-gradient($white, hashGet($colors, bright-color) 1px, hashGet($colors, mid-color) 2px)
   border: 1px solid hashGet($colors, dark-color)
-  box-shadow: inset 0 -1px 1px 1px hashGet($colors, bright-color), 0 3px 0 hashGet($colors, dark-color)
+  box-shadow: inset 0 -1px 1px 1px rgba(hashGet($colors, bright-color), 0.5), 0 3px 0 hashGet($colors, dark-color)
 
   @media all and (-webkit-min-device-pixel-ratio: 1.5)
     &
