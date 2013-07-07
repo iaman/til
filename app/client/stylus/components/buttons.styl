@@ -28,6 +28,7 @@ button, input[type="button"], .button
   line-height: $line-base
   margin-bottom: $line-base
   max-width: 100%
+  overflow: hidden
   padding: ($line-base / 2) - $border-button ($gutter-width / 2)
   position: relative
   text-align: center
@@ -49,7 +50,9 @@ button, input[type="button"], .button
     color: $white
 
   &:hover
+    color: $white
     top: -2px
+    text-decoration: none
 
   &:active
     top: ($line-base / 4) - 1
@@ -85,12 +88,24 @@ button, input[type="button"], .button
   button, input[type="button"], .button
     width: auto
 
-    &.large
+    &.grid-2
+      width: 50%
+
+    &.grid-1, &.grid-3, &.grid-4, &.large
       width: 100%
 
 @media $large-width
   button, input[type="button"], .button
     width: auto
 
-    &.large
+    &.grid-1
+      width: 25%
+
+    &.grid-2
+      width: 50%
+
+    &.grid-3
+      width: 75%
+
+    &.grid-4, &.large
       width: 100%
