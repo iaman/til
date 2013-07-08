@@ -16,6 +16,16 @@
       height: auto
       width: 100%
 
+  hgroup:last-child
+    margin-bottom: -1px
+
+  hgroup, .card-contents
+    &:first-child
+      margin-top: $line-base - 1
+
+  .card-contents:first-child
+    padding-bottom: $line-base - 1
+
   for cardColor in "green" "red" "blue" "yellow" "orange" "purple"
     &.{unquote(cardColor)}
       background-color: rgba(hashGet($colors, "dark-" + cardColor), 0.5)
