@@ -7,7 +7,7 @@
   figure
     border-bottom: 1px solid $dark-gray
     border-radius: top 8px
-    height: $line-base * 4
+    height: $line-base * 4 - 1
     margin-bottom: $line-base - 1
     overflow: hidden
     width: 100%
@@ -16,15 +16,18 @@
       height: auto
       width: 100%
 
-  hgroup:last-child
-    margin-bottom: -1px
+  hgroup
+    margin-bottom: $line-base
+
+    h1, h2, h3
+      margin-bottom: 0
 
   hgroup, .card-contents
     &:first-child
       margin-top: $line-base - 1
 
-  .card-contents:first-child
-    padding-bottom: $line-base - 1
+    &:last-child
+      margin-bottom: $line-base - 1
 
   for cardColor in "green" "red" "blue" "yellow" "orange" "purple"
     &.{unquote(cardColor)}
@@ -36,7 +39,7 @@
 
 .card-contents
   clearfix()
-  padding: 0 $gutter-width $line-base - 2
+  padding: 0 $gutter-width
 
 @media $medium-width
   .card figure
