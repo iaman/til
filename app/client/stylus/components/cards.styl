@@ -1,0 +1,45 @@
+.card
+  background: rgba($black, 0.75)
+  border: 1px solid $dark-gray
+  border-radius: 8px
+  position: relative
+
+  figure
+    border-bottom: 1px solid $dark-gray
+    border-radius: top 8px
+    height: $line-base * 4
+    margin-bottom: $line-base - 1
+    overflow: hidden
+    width: 100%
+
+    img
+      height: auto
+      width: 100%
+
+  for cardColor in "green" "red" "blue" "yellow" "orange" "purple"
+    &.{unquote(cardColor)}
+      background-color: rgba(hashGet($colors, "dark-" + cardColor), 0.5)
+      border-color: hashGet($colors, "mid-" + cardColor)
+
+      figure
+        border-color: hashGet($colors, "mid-" + cardColor)
+
+.card-contents
+  clearfix()
+  padding: 0 $gutter-width $line-base - 2
+
+@media $medium-width
+  .card figure
+    height: $line-base * 8
+  .grid-2 .card figure
+    height: $line-base * 4
+
+@media $large-width
+  .card figure
+    height: $line-base * 12
+
+  .grid-2 .card figure
+    height: $line-base * 8
+
+  .grid-1 .card figure
+    height: $line-base * 4
