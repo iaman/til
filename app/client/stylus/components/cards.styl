@@ -29,12 +29,15 @@
     &:last-child
       margin-bottom: $line-base - 1
 
+  hr
+    border-color: $dark-gray
+
   for cardColor in "green" "red" "blue" "yellow" "orange" "purple"
     &.{unquote(cardColor)}
       background-color: rgba(hashGet($colors, "dark-" + cardColor), 0.5)
       border-color: hashGet($colors, "mid-" + cardColor)
 
-      figure
+      figure, hr
         border-color: hashGet($colors, "mid-" + cardColor)
 
 .card-contents
@@ -43,16 +46,16 @@
 
 @media $medium-width
   .card figure
-    height: $line-base * 8
+    height: $line-base * 8 - 1
   .grid-2 .card figure
-    height: $line-base * 4
+    height: $line-base * 4 - 1
 
 @media $large-width
   .card figure
-    height: $line-base * 12
+    height: $line-base * 12 - 1
 
   .grid-2 .card figure
-    height: $line-base * 8
+    height: $line-base * 8 - 1
 
   .grid-1 .card figure
-    height: $line-base * 4
+    height: $line-base * 4 - 1
