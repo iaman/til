@@ -4,7 +4,7 @@ block body
   article
     section
       hgroup
-        h1 Holy crap it's a styleguide
+        h1 Holy crap it&apos;s a styleguide
 
     section
       .grid-4
@@ -214,3 +214,83 @@ block body
         progress(value="42",max="100")
         progress(value="84",max="100").on-track
         progress
+
+    section
+      hgroup
+        h2 Cards
+
+      section
+        .grid-1
+          .card
+            figure
+              img(src="http://i46.tinypic.com/28jdsvc.gif")
+            hgroup
+              h3 A tiny card
+
+            .card-contents
+              p Just a wisp of text
+              hr
+
+              button.grid-4 Buttons
+
+        .grid-1
+          .card.red
+            hgroup
+              h3 Another one
+
+        .grid-1
+          .card.green
+            figure
+              img(src="http://i46.tinypic.com/28jdsvc.gif")
+            hgroup
+              h3 Look at &apos;em go
+
+            .card-contents
+              button.grid-4.orange Teeny
+
+        .grid-1
+          .card.blue
+            .card-contents
+              p Barely a whisper
+
+              button.grid-4.yellow Buttons
+
+      section
+        .grid-2
+          .card.purple
+            figure
+              img(src="http://i46.tinypic.com/28jdsvc.gif")
+            hgroup
+              h3 A card of some sort
+
+            .card-contents
+              p Some text, maybe a nice sentence or two. Something to really make it seem like I wrote something for you to read
+              hr
+
+              button.green A button
+
+        .grid-2
+          .card.yellow
+            figure
+              img(src="http://i46.tinypic.com/28jdsvc.gif")
+            hgroup
+              h3 A card of the same sort
+
+            .card-contents
+              p Some other text, maybe just a sentence
+              hr
+
+              button.large.disabled Large button
+
+      .grid-4
+        .card.orange
+          figure
+            img(src="http://i46.tinypic.com/28jdsvc.gif")
+          hgroup
+            h3 This... I don&apos;t even know what *this* is
+
+          .card-contents
+            p Like a really big freakin card or something I guess
+            p With a really big button at the bottom
+
+            button.large.red DO NOT PRESS THIS BUTTON
