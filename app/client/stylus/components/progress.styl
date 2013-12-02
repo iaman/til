@@ -27,7 +27,7 @@ progressColors(progress-color, mid-color = "mid-" + progress-color, dark-color =
 
 defaultProgress()
   progressColors("blue")
-  border-radius: $border-button-radius
+  border-radius: $border-button-radius - 1 $border-button-radius - 1 $border-button-radius $border-button-radius
   position: relative
   top: -3px
   transition: all 1s ease
@@ -35,7 +35,7 @@ defaultProgress()
 progress
   -webkit-appearance: none
   background-color: $black
-  border-radius: $border-button-radius
+  border-radius: $border-button-radius - 1 $border-button-radius - 1 $border-button-radius $border-button-radius
   border: 1px solid $dark-gray
   box-sizing: border-box
   color: $mid-blue
@@ -68,7 +68,7 @@ progress
 
   &::-webkit-progress-bar
     background-color: $black
-    border-radius: $border-button-radius
+    border-radius: $border-button-radius - 1 $border-button-radius - 1 $border-button-radius $border-button-radius
 
   &::-webkit-progress-value
     defaultProgress()
