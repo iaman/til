@@ -10,9 +10,13 @@ nav
   width: 100%
 
   a
+    color: $link-color
     display: block
     font-size: $font-base
     padding: ($line-base / 2) $gutter-width
+
+    &:hover
+      color: $link-hover
 
   li
     display: block
@@ -59,7 +63,7 @@ nav
         display: block
 
       a
-        color: hashGet($colors, "bright-" + $main-color)
+        color: $white
 
     &.right
       float: right
